@@ -69,9 +69,9 @@ heart_disease_data %>%
   group_by(sex_mf, heart_disease) %>% 
   summarise(count=n()) %>% 
   pivot_wider(names_from = heart_disease, values_from = count) ->
-  sex_heart_disease_2by2
+  sex_heart_disease_2by2_table
 
-sex_heart_disease_2by2 %>% 
+sex_heart_disease_2by2_table %>% 
   ggplot(aes(x=sex_mf, y=absent/(absent+present))) + 
     geom_bar(stat = 'identity') + 
     ylim(0,1)
