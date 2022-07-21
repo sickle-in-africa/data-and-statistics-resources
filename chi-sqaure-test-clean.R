@@ -13,6 +13,7 @@
 ################################################################################
 
 # 0. import libraries
+
 library(tidyverse)
 
 # 1. import data
@@ -53,7 +54,7 @@ heart_disease_data %>%
     geom_bar()
 
 heart_disease_data %>% 
-  roup_by(num) %>% 
+  group_by(num) %>% 
   summarise(count=n())
 
 heart_disease_data %>%
